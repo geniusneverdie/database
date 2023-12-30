@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit league</title>
+</head>
+<body>
+	<h1>Edit league</h1>
+	<img src="https://cdn.sportdataapi.com/images/soccer/leagues/39.png" alt="Premier League">
+<img src="https://cdn.sportdataapi.com/images/soccer/leagues/40.png" alt="La Liga">
+<img src="https://cdn.sportdataapi.com/images/soccer/leagues/41.png" alt="Serie A">
+<img src="https://cdn.sportdataapi.com/images/soccer/leagues/42.png" alt="Bundesliga">
+<img src="https://cdn.sportdataapi.com/images/soccer/leagues/43.png" alt="Ligue 1">
+
+	<form method="post" action="{{ url_for('edit_league', leaguename=league[0]) }}">
+		<label for="leaguename">leaguename:</label>
+		<input type="text" name="leaguename" value="{{ league[0] }}"><br>
+		<label for="level">level:</label>
+		<input type="number" name="level" value="{{ league[1] }}"><br>
+		<label>nation:</label>
+		<input type="text" name="nation" value="{{ league[2] }}"><br>
+		<input type="submit" value="Save">
+		<a href="{{ url_for('league') }}">cancel</a>
+	</form>
+</body>
+</html>

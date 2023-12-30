@@ -1,0 +1,58 @@
+3<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>team List</title>
+</head>
+<body>
+	<h1>team List</h1>
+	<div>
+	    <a href="/team/add">Add team</a>
+		<img src="OIP-C.jpg">
+		<img src="https://cdn.sportdataapi.com/images/soccer/teams/50.png" alt="FC Barcelona">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/109.png" alt="Real Madrid">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/9.png" alt="Manchester United">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/11.png" alt="Liverpool FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/22.png" alt="Bayern Munich">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/24.png" alt="Borussia Dortmund">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/41.png" alt="Paris Saint-Germain">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/48.png" alt="Juventus FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/73.png" alt="Chelsea FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/109.png" alt="Real Madrid">
+
+	</div>
+	<table>
+		
+			<tr>
+				<th>teamname</th>
+				<th>scores</th>
+				<th>fame</th>
+				<th>homecount</th>
+				<th>profit</th>
+				<th>ranking</th>
+				<th>leaguename</th>
+				<th>edit</th>
+				<th>delete</th>
+			</tr>
+		
+		
+			{% for team in teams %}
+			<tr>
+				<td>{{ team[0] }}</td>
+				<td>{{ team[1] }}</td>
+				<td>{{ team[2] }}</td>
+				<td>{{ team[3] }}</td>
+				<td>{{ team[4] }}</td>
+				<td>{{ team[5] }}</td>
+                <td>{{ team[6] }}</td>
+				<td><a href="{{ url_for('edit_team', teamname=team[0]) }}">Edit</a></td>                
+				<td><a href="{{ url_for('delete_team', teamname=team[0]) }}">Delete</a></td>
+				<td><a href="{{ url_for('sel', teamname=team[0]) }}">view</a></td>
+
+			</tr>
+			{% endfor %}
+		
+	</table>
+	<li><a href="{{ url_for('index') }}">View all</a></li>
+</body>
+</html>

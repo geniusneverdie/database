@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add player</title>
+</head>
+<body>
+	<h1>Add player</h1>
+	<img src="https://cdn.sportdataapi.com/images/soccer/players/529.png" alt="Messi">
+<img src="https://cdn.sportdataapi.com/images/soccer/players/548.png" alt="Cristiano Ronaldo">
+<img src="https://cdn.sportdataapi.com/images/soccer/players/2163.png" alt="Mbappé">
+<img src="https://cdn.sportdataapi.com/images/soccer/players/5929.png" alt="Haaland">
+
+	<form method="post" action="{{ url_for('add_player') }}">
+		<label>playername</label>
+		<input type="text" name="playername"><br>
+		<label>playnumber</label>
+		<input type="number" name="playnumber"><br>
+		<label>status:</label>
+		<input type="text" name="status"><br>
+		<label>age:</label>
+		<input type="number" name="age"><br>
+		<label>usedfoot:</label>
+		<input type="text" name="usedfoot"><br>
+		<label>height:</label>
+		<input type="number" name="height"><br>
+        <label>weight:</label>
+		<input type="number" name="weight"><br>
+		<label>teamname:</label>
+		<input type="text" name="teamname"><br>
+		<label>goals:</label>
+		<input type="number" name="goals"><br>
+		<label>assists:</label>
+		<input type="number" name="assists"><br>
+        <label>appearances:</label>
+		<input type="number" name="appearances"><br>
+		<label>startings:</label>
+		<input type="number" name="startings"><br>
+		<label>nogoaltimes:</label>
+		<input type="number" name="nogoaltimes"><br>
+		<label>averagecomments:</label>
+		<input type="number" name="averagecomments"><br>
+        <label>playposition:</label>
+		<input type="text" name="playposition"><br>
+		<input type="submit" value="Add">
+		<a href="{{ url_for('player') }}">cancel</a>
+	</form>
+</body>
+</html>

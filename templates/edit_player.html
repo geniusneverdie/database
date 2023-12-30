@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit player</title>
+</head>
+<body>
+	<h1>Edit player</h1>
+	<img src="https://cdn.sportdataapi.com/images/soccer/players/529.png" alt="Messi">
+<img src="https://cdn.sportdataapi.com/images/soccer/players/548.png" alt="Cristiano Ronaldo">
+<img src="https://cdn.sportdataapi.com/images/soccer/players/2163.png" alt="Mbappé">
+<img src="https://cdn.sportdataapi.com/images/soccer/players/5929.png" alt="Haaland">
+
+	<form method="post" action="{{ url_for('edit_player', playername=player[0]) }}">
+		<label for="playername">playername:</label>
+		<input type="text" name="playername" value="{{ player[0] }}"><br>
+		<label for="playnumber">playnumber:</label>
+		<input type="number" name="playnumber" value="{{ player[1] }}"><br>
+		<label>status:</label>
+		<input type="text" name="status" value="{{ player[2] }}"><br>
+		<label>age:</label>
+		<input type="number" name="age" value="{{ player[3] }}"><br>
+		<label>usedfoot:</label>
+		<input type="text" name="usedfoot" value="{{ player[4] }}"><br>
+		<label>height:</label>
+		<input type="number" name="height" value="{{ player[5] }}"><br>
+        <label>weight:</label>
+		<input type="number" name="weight" value="{{ player[6] }}"><br>
+		<label>teamname:</label>
+		<input type="text" name="teamname" value="{{ player[7] }}"><br>
+		<label>goals:</label>
+		<input type="number" name="goals" value="{{ player[8] }}"><br>
+		<label>assists:</label>
+		<input type="number" name="assists" value="{{ player[9] }}"><br>
+        <label>appearances:</label>
+		<input type="number" name="appearances" value="{{ player[10] }}"><br>
+		<label>startings:</label>
+		<input type="number" name="startings" value="{{ player[11] }}"><br>
+		<label>nogoaltimes:</label>
+		<input type="number" name="nogoaltimes" value="{{ player[12] }}"><br>
+		<label>averagecomments:</label>
+		<input type="number" name="averagecomments" value="{{ player[13] }}"><br>
+        <label>playposition:</label>
+		<input type="text" name="playposition" value="{{ player[14] }}"><br>
+		<input type="submit" value="Save">
+		<a href="{{ url_for('player') }}">cancel</a>
+	</form>
+</body>
+</html>

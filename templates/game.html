@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>game List</title>
+</head>
+<body>
+	<h1>game List</h1>
+	<div>
+	    <a href="/game/add">Add game</a>
+		<img src="OIP-B.jpg">
+	</div>
+	<table>
+		
+			<tr>
+				<th>gamenumber</th>
+				<th>time</th>
+				<th>location</th>
+				<th>gamescore</th>
+				<th>leaguename</th>				
+				<th>edit</th>
+				<th>delete</th>
+			</tr>
+		
+		
+			{% for game in games %}
+			<tr>
+				<td>{{ game[0] }}</td>
+				<td>{{ game[1] }}</td>
+				<td>{{ game[2] }}</td>
+				<td>{{ game[3] }}</td>
+                <td>{{ game[4] }}</td>
+				<td><a href="{{ url_for('edit_game', gamenumber=game[0]) }}">Edit</a></td>
+				<td><a href="{{ url_for('delete_game', gamenumber=game[0]) }}">Delete</a></td>
+			</tr>
+			{% endfor %}
+		
+	</table>
+	<li><a href="{{ url_for('index') }}">View all</a></li>
+</body>
+</html>

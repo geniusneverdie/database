@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Database App</title>
+</head>
+<body>
+	<h1>Welcome to league team</h1>
+	<img src="https://cdn.sportdataapi.com/images/soccer/balls/soccer-ball.png" alt="足球">
+
+	
+	<p>Click on the links below to manage database tables:</p>
+	<ul>
+		<li><a href="{{ url_for('coach') }}">View coach</a></li>
+		<li><a href="{{ url_for('fans') }}">View fans</a></li>
+		<li><a href="{{ url_for('game') }}">View game</a></li>
+		<li><a href="{{ url_for('league') }}">View league</a></li>
+		<li><a href="{{ url_for('player') }}">View player</a></li>
+		<li><a href="{{ url_for('team') }}">View team</a></li>
+		
+	</ul>
+</body>
+</html>

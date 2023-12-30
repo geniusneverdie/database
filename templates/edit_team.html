@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit team</title>
+</head>
+<body>
+	<h1>Edit team</h1>
+	<img src="https://cdn.sportdataapi.com/images/soccer/teams/50.png" alt="FC Barcelona">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/109.png" alt="Real Madrid">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/9.png" alt="Manchester United">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/11.png" alt="Liverpool FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/22.png" alt="Bayern Munich">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/24.png" alt="Borussia Dortmund">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/41.png" alt="Paris Saint-Germain">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/48.png" alt="Juventus FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/73.png" alt="Chelsea FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/109.png" alt="Real Madrid">
+
+	<form method="post" action="{{ url_for('edit_team', teamname=team[0]) }}">
+		<label for="teamname">teamname:</label>
+		<input type="text" name="teamname" value="{{ team[0] }}"><br>
+		<label for="scores">scores:</label>
+		<input type="number" name="scores" value="{{ team[1] }}"><br>
+		<label>fame:</label>
+		<input type="text" name="fame" value="{{ team[2] }}"><br>
+		<label>homecount:</label>
+		<input type="text" name="homecount" value="{{ team[3] }}"><br>
+		<label>profit:</label>
+		<input type="number" name="profit" value="{{ team[4] }}"><br>
+		<label>ranking:</label>
+        <input type="number" name="ranking" value="{{ team[5] }}"><br>
+		<label>leaguename:</label>
+		<input type="text" name="leaguename" value="{{ team[6] }}"><br>
+		<input type="submit" value="Save">
+		<a href="{{ url_for('team') }}">cancel</a>
+	</form>
+</body>
+</html>

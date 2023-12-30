@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add fans</title>
+</head>
+<body>
+	<h1>Add fans</h1>
+	<form method="post" action="{{ url_for('add_fans') }}">
+		<label>id</label>
+		<input type="number" name="id"><br>
+		<label>age:</label>
+		<input type="number" name="age"><br>
+		<label>fgender:</label>
+		<input type="text" name="fgender"><br>
+		<label>work:</label>
+		<input type="text" name="work"><br>
+		<label>teamname:</label>
+		<input type="work" name="teamname"><br>
+		<input type="submit" value="Add">
+		<a href="{{ url_for('fans') }}">cancel</a>
+	</form>
+</body>
+</html>

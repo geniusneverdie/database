@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add league</title>
+</head>
+<body>
+	<h1>Add league</h1>
+	<img src="https://cdn.sportdataapi.com/images/soccer/leagues/39.png" alt="Premier League">
+<img src="https://cdn.sportdataapi.com/images/soccer/leagues/40.png" alt="La Liga">
+<img src="https://cdn.sportdataapi.com/images/soccer/leagues/41.png" alt="Serie A">
+<img src="https://cdn.sportdataapi.com/images/soccer/leagues/42.png" alt="Bundesliga">
+<img src="https://cdn.sportdataapi.com/images/soccer/leagues/43.png" alt="Ligue 1">
+
+	<form method="post" action="{{ url_for('add_league') }}">
+		<label>leaguename</label>
+		<input type="text" name="leaguename"><br>
+		<label>level:</label>
+		<input type="number" name="level"><br>
+		<label>nation:</label>
+		<input type="text" name="nation"><br>
+		<input type="submit" value="Add">
+		<a href="{{ url_for('league') }}">cancel</a>
+	</form>
+</body>
+</html>

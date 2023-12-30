@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit game</title>
+</head>
+<body>
+	<h1>Edit game</h1>
+	<form method="post" action="{{ url_for('edit_game', game=game[0]) }}">
+		<label for="gamenumber">gamenumber:</label>
+		<input type="number" name="gamenumber" value="{{ game[0] }}"><br>
+		<label for="time">name:</label>
+		<input type="text" name="time" value="{{ game[1] }}"><br>
+		<label>location:</label>
+		<input type="text" name="location" value="{{ game[2] }}"><br>
+		<label>gamescore:</label>
+		<input type="text" name="gamescore" value="{{ game[3] }}"><br>
+		<label>leaguename:</label>
+		<input type="text" name="leaguename" value="{{ game[4] }}"><br>
+		<input type="submit" value="Save">
+		<a href="{{ url_for('game') }}">cancel</a>
+	</form>
+</body>
+</html>

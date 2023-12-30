@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>league List</title>
+</head>
+<body>
+	<h1>league List</h1>
+	<img src="R-C.jpg" alt="English Premier League">  
+	<img src="https://cdn.sportdataapi.com/images/soccer/leagues/39.png" alt="Premier League">
+    <img src="https://cdn.sportdataapi.com/images/soccer/leagues/40.png" alt="La Liga">
+    <img src="https://cdn.sportdataapi.com/images/soccer/leagues/41.png" alt="Serie A">
+    <img src="https://cdn.sportdataapi.com/images/soccer/leagues/42.png" alt="Bundesliga">
+    <img src="https://cdn.sportdataapi.com/images/soccer/leagues/43.png" alt="Ligue 1">
+  
+	<div>
+	    <a href="/league/add">Add league</a>
+	</div>
+	<table>
+		
+			<tr>
+				<th>leaguename</th>
+				<th>level</th>
+				<th>nation</th>
+				<th>edit</th>
+				<th>delete</th>
+			</tr>
+		
+		
+			{% for league in leagues %}
+			<tr>
+				<td>{{ league[0] }}</td>
+				<td>{{ league[1] }}</td>
+				<td>{{ league[2] }}</td>
+				<td><a href="{{ url_for('edit_league', leaguename=league[0]) }}">Edit</a></td>
+				<td><a href="{{ url_for('delete_league', leaguename=league[0]) }}">Delete</a></td>
+			</tr>
+			{% endfor %}
+		
+	</table>
+	<li><a href="{{ url_for('index') }}">View all</a></li>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Work1
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>数据库控制</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+            <h1>数据库控制</h1>
+            <h2>插入</h2>
+            <form action="insert.php" method="post">
+                <label for="table_name">表名：</label>
+                <select name="table_name" id="table_name">
+                    <option value="fans">fans</option>
+                    <option value="coach">coach</option>
+                    <option value="team">team</option>
+                    <option value="game">game</option>
+                    <option value="player">player</option>
+                    <option value="referee">referee</option>
+                    <option value="league">league</option>
+                </select><br><br>
+                <label for="data">数据：</label>
+                <input type="text" name="data" id="data"><br><br>
+                <input type="submit" value="提交">
+            </form>
+            <h2>删除</h2>
+            <form action="delete.php" method="post">
+                <label for="table_name">表名：</label>
+                <select name="table_name" id="table_name">
+                    <option value="fans">fans</option>
+                    <option value="coach">coach</option>
+                    <option value="team">team</option>
+                    <option value="game">game</option>
+                    <option value="player">player</option>
+                    <option value="referee">referee</option>
+                    <option value="league">league</option>
+                </select><br><br>
+                <label for="condition">

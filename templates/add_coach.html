@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Add Coach</title>
+</head>
+<body>
+    <h1>Add Coach</h1>
+    <div>
+        <form action='/coach/add' method='POST'>
+			<label for='coachnumber'>coachnumber:</label>
+			<input type='number' id='coachnumber' name='coachnumber'><br>
+            <label for='coachname'>coachname:</label>
+            <input type='text' id='coachname' name='coachname'><br>
+            <label for='position'>position:</label>
+            <input type='text' id='position' name='position'><br>
+            <label for='age'>age:</label>
+            <input type='number' id='age' name='age'><br>
+            <label for='teamname'>teamname:</label>
+            <input type='text' id='teamname' name='teamname'><br>
+            <input type='submit' value='Add'>
+			<a href="{{ url_for('coach') }}">cancel</a>
+        </form>
+    </div>
+</body>
+</html>

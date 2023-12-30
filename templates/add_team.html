@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add team</title>
+	<img src="https://cdn.sportdataapi.com/images/soccer/teams/50.png" alt="FC Barcelona">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/109.png" alt="Real Madrid">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/9.png" alt="Manchester United">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/11.png" alt="Liverpool FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/22.png" alt="Bayern Munich">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/24.png" alt="Borussia Dortmund">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/41.png" alt="Paris Saint-Germain">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/48.png" alt="Juventus FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/73.png" alt="Chelsea FC">
+<img src="https://cdn.sportdataapi.com/images/soccer/teams/109.png" alt="Real Madrid">
+
+</head>
+<body>
+	<h1>Add team</h1>
+	<form method="post" action="{{ url_for('add_team') }}">
+		<label>teamname</label>
+		<input type="teamname" name="teamname"><br>
+		<label>scores:</label>
+		<input type="number" name="scores"><br>
+		<label>fame:</label>
+		<input type="text" name="fame"><br>
+		<label>homecount:</label>
+		<input type="text" name="homecount"><br>
+		<label>profit:</label>
+		<input type="number" name="profit"><br>
+		<label>ranking:</label>
+        <input type="number" name="ranking"><br>
+		<label>leaguename:</label>
+		<input type="text" name="leaguename"><br>
+		<input type="submit" value="Add">
+		<a href="{{ url_for('team') }}">cancel</a>
+	</form>
+</body>
+</html>

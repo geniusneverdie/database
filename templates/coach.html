@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>coach List</title>
+</head>
+<body>
+    <h1>Coach List</h1>
+    <div>
+        <a href='/coach/add'>Add Coach</a>
+        <img src="OIP-A.jpg">
+    </div>
+    <table>
+        <tr>
+            <th>coachnumber</th>
+            <th>coachname</th>
+            <th>position</th>
+            <th>age</th>
+            <th>teamname</th>
+            <th>edit</th>
+            <th>delete</th>            
+        </tr>
+        {% for coach in coachs %}
+        <tr>
+            <td>{{coach[0]}}</td>
+            <td>{{coach[1]}}</td>
+            <td>{{coach[2]}}</td>
+            <td>{{coach[3]}}</td>
+            <td>{{coach[4]}}</td>
+            <td><a href="{{ url_for('edit_coach', coachnumber=coach[0]) }}">Edit</a></td>
+            <td><a href="{{ url_for('delete_coach', coachnumber=coach[0]) }}">Delete</a></td>			
+        </tr>
+        {% endfor %}
+    </table>
+	<li><a href="{{ url_for('index') }}">View all</a></li>
+</body>
+</html>

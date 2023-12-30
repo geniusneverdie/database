@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit fans</title>
+</head>
+<body>
+	<h1>Edit fans</h1>
+	<form method="post" action="{{ url_for('edit_fans', id=fans[0]) }}">
+		<label for="id">id:</label>
+		<input type="number" name="id" value="{{ fans[0] }}"><br>
+		<label for="age">age:</label>
+		<input type="number" name="age" value="{{ fans[1] }}"><br>
+		<label>fgender:</label>
+		<input type="text" name="fgender" value="{{ fans[2] }}"><br>
+		<label>work:</label>
+		<input type="text" name="work" value="{{ fans[3] }}"><br>
+		<label>teamname:</label>
+		<input type="text" name="teamname" value="{{ fans[4] }}"><br>
+		<input type="submit" value="Save">
+		<a href="{{ url_for('fans') }}">cancel</a>
+	</form>
+</body>
+</html>

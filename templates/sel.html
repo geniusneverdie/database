@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>team league player View</title>
+</head>
+<body>
+    
+	<div>
+	    <form action="{{ url_for('sel', teamname=team[0]) }}" method="POST">
+
+			<table>
+			    <tr>
+			        <th>teamname</th>
+			        <th>scores</th>
+			        <th>fame</th>
+			        <th>homecount</th>
+			        <th>profit</th>
+			        <th>ranking</th>
+			        <th>leaguename</th>
+			        <th>level</th>
+			        <th>nation</th>
+			        <th>playername</th>
+			        <th>playnumber</th>
+			        <th>status</th>
+					<th>age</th>
+			        <th>usedfoot</th>
+			        <th>height</th>
+			        <th>weight</th>
+			        <th>goals</th>
+			        <th>assists</th>
+			        <th>appearances</th>
+			        <th>startings</th>
+			        <th>nogoaltimes</th>
+			        <th>averagecomments</th>
+			        <th>playposition</th>			        
+			    </tr>
+			    {% for item in data %}
+			    <tr>
+			        <td>{{item[0]}}</td>
+			        <td>{{item[1]}}</td>
+			        <td>{{item[2]}}</td>
+			        <td>{{item[3]}}</td>
+			        <td>{{item[4]}}</td>
+			        <td>{{item[5]}}</td>
+			        <td>{{item[6]}}</td>
+			        <td>{{item[7]}}</td>
+			        <td>{{item[8]}}</td>
+			        <td>{{item[9]}}</td>
+			        <td>{{item[10]}}</td>
+			        <td>{{item[11]}}</td>
+					<td>{{item[12]}}</td>
+			        <td>{{item[13]}}</td>
+			        <td>{{item[14]}}</td>
+			        <td>{{item[15]}}</td>
+			        <td>{{item[16]}}</td>
+			        <td>{{item[17]}}</td>
+			        <td>{{item[18]}}</td>
+			        <td>{{item[19]}}</td>
+			        <td>{{item[20]}}</td>
+			        <td>{{item[21]}}</td>
+			        <td>{{item[22]}}</td>			   
+			    </tr>
+			    {% endfor %}
+			</table>
+			<a href="{{ url_for('team') }}">return</a>
+	    </form>
+	</div>
+</body>
+</html>
